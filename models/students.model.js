@@ -1,6 +1,6 @@
 import sequelize from "../data/index.js";
 import { DataTypes } from "sequelize";
-
+import Career from "./career.model.js";
 
 const Students = sequelize.define("students", {
     id: {
@@ -26,3 +26,7 @@ const Students = sequelize.define("students", {
         allowNull: false,
     }
 })
+
+Students.belongsTo(Career, { foreignKey: "career_id" });
+
+module.exports = Students;
