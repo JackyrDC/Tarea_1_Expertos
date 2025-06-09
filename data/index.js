@@ -1,9 +1,9 @@
 import sequelize from "sequelize";
 
-const sequelize = new sequelize("db_estudiantes", "root","root",{
-    host: "localhost",
+const sequelize = new sequelize(DATABASE, DBUSER,{
+    host: DBHOST,
     dialect: "mysql",
-    port: 3306, 
+    port: DBPORT, 
     logging: false,
 } )
 
